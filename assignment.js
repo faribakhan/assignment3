@@ -41,18 +41,16 @@ var totalBrick = brickCalculator(12);
 console.log(totalBrick);
 
 function tinyFriend(names){
+    var minNamelength = names[0].length; 
     for(var i=1; i<names.length; i++){
+        var minName = names[0];
         var name1Length = names[i].length;
-        var name2Length = names[i-1].length;
-        if(name1Length<name2Length){
-            var minName = names[i];
+        if(name1Length<minNamelength){
+             minName = names[i];
         }
-        else{
-        minName = names[i-1];
-    }
-    return minName;
-    }
 }
-var name = ['sadoa','uiashdu','djhjs'];
+   return minName;
+}
+var name = ['Saima','Salman','Purna','Nini','pri'];
 var tinyname = tinyFriend(name);
 console.log(tinyname);
